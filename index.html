@@ -1,12 +1,190 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Звездные войны</title>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-	<h1>Hello, World!</h1>
+	<header class="header">
+		<div class="container">
+			<div class="header-wrapper">
+				<a href="#!" class="header__logo">
+					<img src="/img/logo.svg" alt="Header logo">
+				</a>
+				<nav class="header__navbar">
+					<ul class="header__list">
+						<li class="header__item">
+							<a href="#!" class="header__link">
+								Билеты
+							</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">
+								О фильме
+							</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">
+								Трейлеры
+							</a>
+						</li>
+						<li class="header__item">
+							<a href="#!" class="header__link">
+								Отзывы
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<div class="header__burger">
+					<button class="submenu anim-menu-btn">
+						<i class="anim-menu-btn__icon anim-menu-btn__icon--close"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main">
+		<section class="hero">
+			<div class="container">
+				<span class="hero__subtitle">Эпизод IX</span>
+				<h1 class="hero__title">Скайуокер. Восход</h1>
+				<p class="hero__description">Фильм завершает невероятную историю семьи Скайуокеров, длящуюся уже более сорока
+					лет, и обещает дать ответы на все загадки из предыдущих серий. Зрителя ожидают старые и новые герои,
+					уникальные миры, увлекательные путешествия на край Галактики и грандиозный финал фантастической саги
+				</p>
+				<span class="hero__accent">Премьера</span>
+				<span class="hero__date">19 декабря 2019</span>
+				<a data-fancybox href="https://www.youtube.com/watch?v=KVRBfWQgyuY" class="hero__button">Смотреть трейлер</a>
+			</div>
+		</section>
+
+		<section class="episodes">
+			<div class="container">
+				<h2 class="episodes__title">Предыдущие эпизоды</h2>
+
+				<div class="swiper slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide slider__item">
+							<div class="slider__year">1977</div>
+							<h3 class="slider__title">
+								Эпизод IV: <br />
+								Новая надежда
+							</h3>
+							<div class="slider__rating">
+								<span class="slider__rating-label">Рейтинг</span>
+								<div class="rating">
+									<div class="rating__items">
+										<input id="rating__1-5" type="radio" class="rating__item" name="rating" value="5">
+										<label for="rating__1-5" class="rating__label"></label>
+										<input id="rating__1-4" type="radio" class="rating__item" checked name="rating" value="4">
+										<label for="rating__1-4" class="rating__label"></label>
+										<input id="rating__1-3" type="radio" class="rating__item" name="rating" value="3">
+										<label for="rating__1-3" class="rating__label"></label>
+										<input id="rating__1-2" type="radio" class="rating__item" name="rating" value="2">
+										<label for="rating__1-2" class="rating__label"></label>
+										<input id="rating__1-1" type="radio" class="rating__item" name="rating" value="1">
+										<label for="rating__1-1" class="rating__label"></label>
+									</div>
+								</div>
+							</div>
+							<img src="/img/slides/slide-1.png" alt="Slider image" class="slider__image">
+						</div>
+						<div class="swiper-slide slider__item">
+							<div class="slider__year">1980</div>
+							<h3 class="slider__title">
+								Эпизод V: <br />
+								Империя наносит ответный удар
+							</h3>
+							<div class="slider__rating">
+								<span class="slider__rating-label">Рейтинг</span>
+								<div class="rating">
+									<div class="rating__items">
+										<input id="rating__2-5" type="radio" class="rating__item" name="rating" value="5">
+										<label for="rating__2-5" class="rating__label"></label>
+										<input id="rating__2-4" type="radio" class="rating__item" name="rating" checked value="4">
+										<label for="rating__2-4" class="rating__label"></label>
+										<input id="rating__2-3" type="radio" class="rating__item" name="rating" value="3">
+										<label for="rating__2-3" class="rating__label"></label>
+										<input id="rating__2-2" type="radio" class="rating__item" name="rating" value="2">
+										<label for="rating__2-2" class="rating__label"></label>
+										<input id="rating__2-1" type="radio" class="rating__item" name="rating" value="1">
+										<label for="rating__2-1" class="rating__label"></label>
+									</div>
+								</div>
+							</div>
+							<img src="/img/slides/slide-2.png" alt="Slider image" class="slider__image">
+						</div>
+						<div class="swiper-slide slider__item">
+							<div class="slider__year">1983</div>
+							<h3 class="slider__title">
+								Эпизод VI: <br />
+								Возвращение джедая
+							</h3>
+							<div class="slider__rating">
+								<span class="slider__rating-label">Рейтинг</span>
+								<div class="rating">
+									<div class="rating__items">
+										<input id="rating__3-5" type="radio" class="rating__item" name="rating" value="5">
+										<label for="rating__3-5" class="rating__label"></label>
+										<input id="rating__3-4" type="radio" class="rating__item" name="rating" value="4">
+										<label for="rating__3-4" class="rating__label"></label>
+										<input id="rating__3-3" type="radio" class="rating__item" checked name="rating" value="3">
+										<label for="rating__3-3" class="rating__label"></label>
+										<input id="rating__3-2" type="radio" class="rating__item" name="rating" value="2">
+										<label for="rating__3-2" class="rating__label"></label>
+										<input id="rating__3-1" type="radio" class="rating__item" name="rating" value="1">
+										<label for="rating__3-1" class="rating__label"></label>
+									</div>
+								</div>
+							</div>
+							<img src="/img/slides/slide-3.png" alt="Slider image" class="slider__image">
+						</div>
+						<div class="swiper-slide slider__item">
+							<div class="slider__year">1999</div>
+							<h3 class="slider__title">
+								Эпизод I: <br />
+								Скрытая угроза
+							</h3>
+							<div class="slider__rating">
+								<span class="slider__rating-label">Рейтинг</span>
+								<div class="rating">
+									<div class="rating__items">
+										<input id="rating__4-5" type="radio" class="rating__item" name="rating" value="5">
+										<label for="rating__4-5" class="rating__label"></label>
+										<input id="rating__4-4" type="radio" class="rating__item" name="rating" value="4">
+										<label for="rating__4-4" class="rating__label"></label>
+										<input id="rating__4-3" type="radio" class="rating__item" name="rating" value="3">
+										<label for="rating__4-3" class="rating__label"></label>
+										<input id="rating__4-2" type="radio" class="rating__item" checked name="rating" value="2">
+										<label for="rating__4-2" class="rating__label"></label>
+										<input id="rating__4-1" type="radio" class="rating__item" name="rating" value="1">
+										<label for="rating__4-1" class="rating__label"></label>
+									</div>
+								</div>
+							</div>
+							<img src="/img/slides/slide-4.png" alt="Slider image" class="slider__image">
+						</div>
+					</div>
+
+					<!-- <div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div> -->
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<script src="/libs/swiper/swiper-bundle.min.js"></script>
+	<script src="/libs/btn/anim-menu-btn.min.js"></script>
+	<script src="/js/app.js"></script>
 </body>
+
 </html>

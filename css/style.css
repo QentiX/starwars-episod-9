@@ -1,14 +1,17 @@
+@import '/css/star-rating.css';
+/* @import '/libs/swiper/swiper-bundle.min.css'; */
+@import '/libs/btn/anim-menu-btn.css';
 @import '/css/reset.css';
 
 /* -------- VARIABLES -------- */
 
 :root {
 	--primary: #fff;
-	--light-gray: #AFAFAF;
-  --dark-red: #B02000;
+	--light-gray: #afafaf;
+	--dark-red: #b02000;
 
-	--primary-text: var(var(--primary));
-	--description: var(var(--light-gray));
+	--primary-text: var(--primary);
+	--description: var(--light-gray);
 	--accent: var(--dark-red);
 }
 
@@ -42,11 +45,228 @@
 	font-weight: 900;
 }
 
-/* -------- MAIN STYLES -------- */
+/* -------- SETTINGS STYLES -------- */
 
 body {
 	font-family: roboto, sans-serif;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 150%;
+	color: var(--primary-text);
+	background-image: url('/img/main-bg.jpeg');
+	background-repeat: no-repeat;
+}
+
+.container {
+	max-width: 1090px;
+	padding: 0 15px;
+	margin: auto;
+}
+
+/* -------- HEADER STYLES -------- */
+
+.header {
+	padding-top: 90px;
+}
+
+.header-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.header__logo {
+	margin-right: 70px;
+}
+
+.header__list {
+	display: flex;
+	align-items: center;
+}
+
+.header__item:not(:last-child) {
+	margin-right: 15px;
+}
+
+.header__link {
+	color: inherit;
+}
+
+.header__burger {
+	display: none;
+}
+
+.submenu {
+	--anim-menu-btn-color: var(--primary-text);
+	--anim-menu-btn-width: 1.08em;
+}
+
+/* -------- HERO SECTION STYLES -------- */
+
+.hero {
+	padding-top: 78px;
+}
+
+.hero__subtitle {
+	font-family: proxima-nova, sans-serif;
+	font-size: 40px;
+	font-weight: 900;
+	line-height: 100%;
+}
+
+.hero__title {
+	font-family: proxima-nova, sans-serif;
+	font-size: 64px;
+	font-weight: 900;
+	line-height: 78px;
+	margin-top: 5px;
+}
+
+.hero__description {
+	max-width: 572px;
+	color: var(--description);
+	margin-top: 25px;
+}
+
+.hero__accent {
+	display: block;
+	color: var(--accent);
+	margin-top: 25px;
+}
+
+.hero__date {
+	display: block;
+	font-size: 24px;
+	margin-top: 5px;
+	margin-bottom: 46px;
+}
+
+.hero__button {
+	position: relative;
+	border: none;
+	border-radius: 300px;
+	background: linear-gradient(90deg, rgb(251, 100, 26), rgb(252, 51, 9) 100%);
+	font-size: 14px;
+	line-height: 16px;
+	padding: 25px 87px 25px 35px;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+	color: var(--primary-text);
+}
+
+.hero__button::after {
+	content: '';
+	position: absolute;
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background-color: var(--primary-text);
+	background-image: url('/img/triangle.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-position-x: 60%;
+	right: 0;
+	top: 0;
+}
+
+.hero__button::before {
+	content: '';
+	position: absolute;
+	width: 81px;
+	height: 81px;
+	border-radius: 50%;
+	background-color: rgba(255, 255, 255, 0.3);
+	right: -8px;
+	top: -8px;
+}
+
+/* -------- EPISODES SECTION STYLES -------- */
+
+.episodes {
+	padding-top: 67px;
+}
+
+.episodes__title {
+	font-weight: 700;
+	margin-bottom: 24px;
+}
+
+/* -------- SLIDER -------- */
+
+.swiper-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.slider__item {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 250px;
+	min-height: 200px;
+	padding: 30px;
+	border-radius: 10px;
+	box-shadow: 0px 10px 26px 0px rgba(0, 0, 0, 0.25);
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.slider__item::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	border-radius: 10px;
+	background-color: rgba(80, 80, 80, 0.86);
+	z-index: -1;
+	transition: all 0.2s;
+}
+
+.slider__item:hover::before {
+	background-color: rgba(64, 101, 255, 0.86);
+}
+
+.slider__image {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -2;
+}
+
+.slider__year {
+	margin-bottom: 5px;
+}
+
+.slider__title {
+	font-weight: 900;
+}
+
+.slider__rating {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.slider__rating-label {
+	font-size: 13px;
+}
+
+/* -------- MEDIA -------- */
+
+@media (max-width: 600px) {
+	.header__logo {
+		margin-right: 0;
+	}
+	.header__burger {
+		display: block;
+	}
+	.header__navbar {
+		display: none;
+	}
+	.header-wrapper {
+		justify-content: space-between;
+	}
 }
